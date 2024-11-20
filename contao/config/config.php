@@ -1,4 +1,4 @@
 <?php
-$GLOBALS['BE_MOD']['system']['redirect'] = [
-    'tables' => ['tl_redirect'],
+$GLOBALS['BE_MOD']['system']['redirection'] = [
+    'tables' => ['tl_redirection'],
 ];
