@@ -1,6 +1,6 @@
 <?php
-// src/EventListener/RedirectListener.php
-namespace Respinar\ContaoRedirectBundle\EventListener;
+// src/EventListener/RedirectionListener.php
+namespace Respinar\ContaoRedirectionBundle\EventListener;
 
 use Contao\CoreBundle\InsertTag\InsertTagParser;
 use Doctrine\DBAL\Connection;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Routing\RequestContext;
 
 #[AsEventListener(event: KernelEvents::REQUEST, priority: 1000)]
-final class RedirectListener
+final class RedirectionListener
 {
     private Connection $db;
     private InsertTagParser $insertTagParser;
@@ -36,7 +36,7 @@ final class RedirectListener
 
         try {
             $redirect = $this->db->fetchAssociative(
-                'SELECT target_url, status_code FROM tl_redirect WHERE source_url = ? AND active = ?',
+                'SELECT target_url, status_code FROM tl_redirection WHERE source_url = ? AND active = ?',
                 [$uri, '1']
             );
 
