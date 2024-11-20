@@ -3,6 +3,6 @@ services:
         autoconfigure: true
         autowire: true
 
-    Respinar\ContaoRedirectBundle\:
+    Respinar\ContaoRedirectionBundle\:
         resource: ../src/
         exclude: ../src/ContaoManager/
