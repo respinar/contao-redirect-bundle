@@ -1,5 +1,5 @@
 {
-    "name": "respinar/contao-redirect-bundle",
+    "name": "respinar/contao-redirection-bundle",
     "description": "Page Gone 410 for Contao",
     "keywords": ["contao", "bundle", "redirect", "404", "410"],
     "type": "contao-bundle",
@@ -13,8 +13,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/respinar/contao-redirect-bundle/issues",
-        "source": "https://github.com/respinar/contao-redirect-bundle"
+        "issues": "https://github.com/respinar/contao-redirection-bundle/issues",
+        "source": "https://github.com/respinar/contao-redirection-bundle"
     },
     "require": {
         "php": "^8.0",
@@ -25,10 +25,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Respinar\\ContaoRedirectBundle\\": "src/"
+            "Respinar\\ContaoRedirectionBundle\\": "src/"
         }
     },
     "extra": {
-        "contao-manager-plugin": "Respinar\\ContaoRedirectBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Respinar\\ContaoRedirectionBundle\\ContaoManager\\Plugin"
     }
 }
