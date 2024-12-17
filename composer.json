@@ -1,0 +1,34 @@
+{
+    "name": "respinar/contao-redirect-bundle",
+    "description": "Page Gone 410 for Contao",
+    "keywords": ["contao", "bundle", "redirect", "404", "410"],
+    "type": "contao-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hamid Peywasti",
+            "email": "hamid@respinar.com",
+            "homepage": "https://respinar.com/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/respinar/contao-redirect-bundle/issues",
+        "source": "https://github.com/respinar/contao-redirect-bundle"
+    },
+    "require": {
+        "php": "^8.0",
+        "contao/core-bundle": "^5.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Respinar\\ContaoRedirectBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Respinar\\ContaoRedirectBundle\\ContaoManager\\Plugin"
+    }
+}
