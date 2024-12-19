@@ -2,6 +2,7 @@
 declare(strict_types=1);
 // src/Resources/contao/dca/tl_redirect.php
 
+use Contao\DataContainer;
 use Contao\DC_Table;
 
 $GLOBALS['TL_DCA']['tl_redirect'] = [
@@ -16,12 +17,13 @@ $GLOBALS['TL_DCA']['tl_redirect'] = [
     ],
     'list' => [
         'sorting' => [
-            'mode' => 1,
-            'fields' => ['source_url'],
+            'fields'       => ['tstamp'],
+			'flag'         => DataContainer::SORT_DESC,
+			'panelLayout'  => 'filter;sort,search,limit'
         ],
         'label' => [
-            'fields' => ['source_url', 'target_url'],
-            'format' => '%s → %s',
+            'fields'       => ['tstamp','source_url','target_url','status_code'],
+			'showColumns'  => true,
         ],
         'operations' => [
             'edit' => ['href' => 'act=edit', 'icon' => 'edit.svg'],
