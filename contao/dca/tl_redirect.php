@@ -48,9 +48,10 @@ $GLOBALS['TL_DCA']['tl_redirect'] = [
         ],
         'target_url' => [
             'label' => ['Target URL', 'The URL to redirect to (ignored for 410)'],
-            'inputType' => 'text',
-            'eval' => ['mandatory' => true, 'tl_class' => 'w50'],
-            'sql' => "varchar(255) NOT NULL default ''",
+			'search'    => true,
+			'inputType' => 'text',
+			'eval'      => ['rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>2048, 'dcaPicker'=>true, 'tl_class'=>'w50'],
+			'sql'       => "varchar(2048) NOT NULL default ''"
         ],
         'status_code' => [
             'label' => ['HTTP Status', 'The redirect status code'],
